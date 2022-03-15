@@ -16,7 +16,6 @@ public class Car {
     @Column(name = "series")
     Integer series;
 
-
     public Car() {
     }
 
