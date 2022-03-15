@@ -21,24 +21,24 @@ public class MainApp {
         userService.add(new User("User4", "Lastname4", "user4@mail.ru"));
 
 // 4. Создайте несколько пользователей с машинами, добавьте их в базу данных, вытащите обратно.
-        User user5 = new User("Tom", "Black", "www.user5");
-        User user6 = new User("Kate", "White", "www.user6");
-        User user7 = new User("Andrew", "Yellow", "www.user7");
+        User user5 = new User("User5", "Lastname5", "user5@mail.ru");
+        User user6 = new User("User6", "Lastname6", "user6@mail.ru");
+        User user7 = new User("User7", "Lastname7", "user7@mail.ru");
 
         Car car5 = new Car("BMW", 5);
         Car car6 = new Car("BMW", 6);
         Car car7 = new Car("BMW", 7);
 
-        user5.setCar(car5);
-        user6.setCar(car6);
-        user7.setCar(car7);
+//        user5.setCar(car5);
+//        user6.setCar(car6);
+//        user7.setCar(car7);
 
         userService.add(user5);
         userService.add(user6);
         userService.add(user7);
-
-        User userHasCar8 = userService.getUserByCarModelAndSeries("BMW", 8);
-        System.out.println(userHasCar8.toString());
+//
+//        User userHasCar8 = userService.getUserByCarModelAndSeries("BMW", 8);
+//        System.out.println(userHasCar8.toString());
 
         List<User> users = userService.listUsers();
         for (User user : users) {
