@@ -37,6 +37,10 @@ public class MainApp {
         user6.setCar(car6);
         user7.setCar(car7);
 
+
+
+
+
 //        User userHasACar = userService.getUserByCarModelAndSeries("BMW", 7);
 //        System.out.println(userHasACar.toString());
 
