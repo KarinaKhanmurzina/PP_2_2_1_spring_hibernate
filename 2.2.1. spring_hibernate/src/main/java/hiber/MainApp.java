@@ -38,7 +38,7 @@ public class MainApp {
         userService.add(user7);
 
         User userHasCar8 = userService.getUserByCarModelAndSeries("BMW", 8);
-        userHasCar8.toString();
+        System.out.println(userHasCar8.toString());
 
         List<User> users = userService.listUsers();
         for (User user : users) {
