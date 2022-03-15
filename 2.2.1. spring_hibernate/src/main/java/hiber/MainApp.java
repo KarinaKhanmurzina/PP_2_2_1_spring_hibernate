@@ -37,19 +37,26 @@ public class MainApp {
         user6.setCar(car6);
         user7.setCar(car7);
 
+//        User userHasACar = userService.getUserByCarModelAndSeries("BMW", 7);
+//        System.out.println(userHasACar.toString());
+
         List<User> users = userService.listUsers();
         for (User user : users) {
-            System.out.println("Id = " + user.getId());
-            System.out.println("First Name = " + user.getFirstName());
-            System.out.println("Last Name = " + user.getLastName());
-            System.out.println("Email = " + user.getEmail());
-            if (user.getCar() != null) {
-                System.out.println("Car = " + user.getCar().toString());
-            } else {
-                System.out.println("This user has not a car");
-            }
+            System.out.println(user.toString());
             System.out.println();
         }
+//        for (User user : users) {
+//            System.out.println("Id = " + user.getId());
+//            System.out.println("First Name = " + user.getFirstName());
+//            System.out.println("Last Name = " + user.getLastName());
+//            System.out.println("Email = " + user.getEmail());
+//            if (user.getCar() != null) {
+//                System.out.println("Car = " + user.getCar().toString());
+//            } else {
+//                System.out.println("This user has not a car");
+//            }
+//            System.out.println();
+//        }
 
         context.close();
     }

@@ -7,6 +7,7 @@ import javax.persistence.*;
 public class User {
 
     @OneToOne
+//   @MapsId
     @JoinColumn
     private Car car;
 
