@@ -25,42 +25,23 @@ public class MainApp {
         User user6 = new User("User6", "Lastname6", "user6@mail.ru");
         User user7 = new User("User7", "Lastname7", "user7@mail.ru");
 
-        Car car5 = new Car("BMW", 5);
-        Car car6 = new Car("BMW", 6);
-        Car car7 = new Car("BMW", 7);
+        user5.setCar(new Car("BMW", 5));
+        user6.setCar(new Car("BMW", 6));
+        user7.setCar(new Car("BMW", 7));
 
         userService.add(user5);
         userService.add(user6);
         userService.add(user7);
 
-        user5.setCar(car5);
-        user6.setCar(car6);
-        user7.setCar(car7);
-
-
-
-
-
-//        User userHasACar = userService.getUserByCarModelAndSeries("BMW", 7);
-//        System.out.println(userHasACar.toString());
-
         List<User> users = userService.listUsers();
         for (User user : users) {
-            System.out.println(user.toString());
-            System.out.println();
+            System.out.println(user);
         }
-//        for (User user : users) {
-//            System.out.println("Id = " + user.getId());
-//            System.out.println("First Name = " + user.getFirstName());
-//            System.out.println("Last Name = " + user.getLastName());
-//            System.out.println("Email = " + user.getEmail());
-//            if (user.getCar() != null) {
-//                System.out.println("Car = " + user.getCar().toString());
-//            } else {
-//                System.out.println("This user has not a car");
-//            }
-//            System.out.println();
-//        }
+
+        System.out.println();
+
+// 5. В сервис добавьте метод, который с помощью hql-запроса будет доставать юзера, владеющего машиной по ее модели и серии.
+        System.out.println(userService.getUserByCarModelAndSeries("BMW", 7));
 
         context.close();
     }

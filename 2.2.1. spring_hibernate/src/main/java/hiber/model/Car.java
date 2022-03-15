@@ -11,10 +11,13 @@ public class Car {
     private Long id;
 
     @Column(name = "model")
-    String model;
+    private String model;
 
     @Column(name = "series")
-    Integer series;
+    private Integer series;
+
+    @OneToOne(mappedBy = "car")
+    private User user;
 
     public Car() {
     }
