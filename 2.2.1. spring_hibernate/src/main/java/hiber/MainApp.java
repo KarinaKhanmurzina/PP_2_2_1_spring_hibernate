@@ -29,13 +29,13 @@ public class MainApp {
         Car car6 = new Car("BMW", 6);
         Car car7 = new Car("BMW", 7);
 
-//        user5.setCar(car5);
-//        user6.setCar(car6);
-//        user7.setCar(car7);
-
         userService.add(user5);
         userService.add(user6);
         userService.add(user7);
+
+        user5.setCar(car5);
+        user6.setCar(car6);
+        user7.setCar(car7);
 
         List<User> users = userService.listUsers();
         for (User user : users) {
