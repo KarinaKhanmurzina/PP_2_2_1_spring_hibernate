@@ -36,9 +36,6 @@ public class MainApp {
         userService.add(user5);
         userService.add(user6);
         userService.add(user7);
-//
-//        User userHasCar8 = userService.getUserByCarModelAndSeries("BMW", 8);
-//        System.out.println(userHasCar8.toString());
 
         List<User> users = userService.listUsers();
         for (User user : users) {
@@ -46,6 +43,11 @@ public class MainApp {
             System.out.println("First Name = " + user.getFirstName());
             System.out.println("Last Name = " + user.getLastName());
             System.out.println("Email = " + user.getEmail());
+            if (user.getCar() != null) {
+                System.out.println("Car = " + user.getCar().toString());
+            } else {
+                System.out.println("This user has not a car");
+            }
             System.out.println();
         }
 
